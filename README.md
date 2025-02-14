@@ -35,6 +35,7 @@ application functions properly across different devices.
 
 - Node.js (tested with v23.1.0)
 - pnpm (tested with v10.2.1)
+- Mock data server provided at : https://github.com/SwissBorg/web-challenge
 
 ### Installation & Usage
 
