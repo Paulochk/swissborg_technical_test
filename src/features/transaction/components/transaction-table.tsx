@@ -1,7 +1,7 @@
 import {Transaction} from "@/models/transaction.ts";
 import {useTransactions} from "@/features/transaction/hooks/use-transactions.ts";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table.tsx";
-import {formatDateMMMDDYYYY} from "@/lib/date-utils.ts";
+import {formatDateDDMMMYYYY} from "@/lib/date-utils.ts";
 import {TransactionStatusEnum} from "@/models/transaction-status-enum.ts";
 import RefreshButton from "@/features/transaction/components/refresh-button.tsx";
 
@@ -34,7 +34,7 @@ function TransactionTable() {
                 <TableBody>
                     {transactions.map((t: Transaction) => (
                         <TableRow key={t.id}>
-                            <TableCell>{formatDateMMMDDYYYY(t.timestamp)}</TableCell>
+                            <TableCell>{formatDateDDMMMYYYY(t.timestamp)}</TableCell>
                             <TableCell>{t.currency}</TableCell>
                             <TableCell>{t.amount}</TableCell>
                             <TableCell>{t.euroAmount ? t.euroAmount : "N/A"}</TableCell>
