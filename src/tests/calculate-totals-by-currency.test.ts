@@ -19,6 +19,15 @@ describe('calculateTotalsByCurrency', () => {
             {
                 id: "2",
                 currency: "USD",
+                amount: 100,
+                euroAmount: 90,
+                type: TransactionTypeEnum.DEPOSIT,
+                status: TransactionStatusEnum.COMPLETED,
+                timestamp: ""
+            },
+            {
+                id: "3",
+                currency: "USD",
                 amount: 50,
                 euroAmount: 45,
                 type: TransactionTypeEnum.WITHDRAWAL,
@@ -26,8 +35,8 @@ describe('calculateTotalsByCurrency', () => {
                 timestamp: ""
             },
             {
-                id: "3",
-                currency: "EUR",
+                id: "4",
+                currency: "ETH",
                 amount: 200,
                 euroAmount: null,
                 type: TransactionTypeEnum.DEPOSIT,
@@ -43,16 +52,16 @@ describe('calculateTotalsByCurrency', () => {
                 id: "USD",
                 currency: "USD",
                 completedWithdrawals: 50,
-                completedDeposits: 100,
+                completedDeposits: 200,
                 pendingWithdrawals: 0,
                 pendingDeposits: 0,
-                balance: 50,
-                eurBalance: 45,
+                balance: 150,
+                eurBalance: 135,
                 hasRates: true,
             },
             {
-                id: "EUR",
-                currency: "EUR",
+                id: "ETH",
+                currency: "ETH",
                 completedWithdrawals: 0,
                 completedDeposits: 0,
                 pendingWithdrawals: 0,
