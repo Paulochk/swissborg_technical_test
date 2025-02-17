@@ -13,7 +13,7 @@ function TransactionSummary() {
     }
 
     if (error) {
-        return <div>"Error loading totals: {error.message}</div>;
+        return <div>Error loading totals: {error.message}</div>;
     }
 
     return (
