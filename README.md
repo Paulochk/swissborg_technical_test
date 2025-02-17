@@ -41,4 +41,4 @@ application functions properly across different devices.
 
 ```sh
 pnpm install  # Install dependencies  
-pnpm start    # Start the server
+pnpm run dev    # Start the server
